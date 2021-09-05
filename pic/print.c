@@ -74,9 +74,9 @@ void print(void)
 			move(ox, oy);
 			dotext(p);
 			if (ishor(m))
-				move(ox + isright(m) ? x1 : -x1, oy);
+				move(ox + (isright(m) ? x1 : -x1), oy);
 			else
-				move(ox, oy + isup(m) ? x1 : -x1);
+				move(ox, oy + (isup(m) ? x1 : -x1));
 			break;
 		case ELLIPSE:
 			if (fill)
@@ -86,9 +86,9 @@ void print(void)
 			move(ox, oy);
 			dotext(p);
 			if (ishor(m))
-				move(ox + isright(m) ? x1 : -x1, oy);
+				move(ox + (isright(m) ? x1 : -x1), oy);
 			else
-				move(ox, oy - isdown(m) ? y1 : -y1);
+				move(ox, oy - (isdown(m) ? y1 : -y1));
 			break;
 		case ARC:
 			if (p->o_attr & HEAD1)
