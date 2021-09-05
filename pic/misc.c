@@ -210,7 +210,7 @@ int whatpos(obj *p, int corner, double *px, double *py)	/* what is the position 
 
 	if (p == NULL)
 		fatal("null object");
-	dprintf("whatpos %o %d %d\n", p, p->o_type, corner);
+	dprintf("whatpos %p %d %d\n", p, p->o_type, corner);
 	x = p->o_x;
 	y = p->o_y;
 	if (p->o_type != PLACE && p->o_type != MOVE) {
